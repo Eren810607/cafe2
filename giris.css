@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.arka-plan {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("src/giris2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.kapsayici {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+}
+
+.secenekler {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    font-size: 18px;
+    position: relative;
+}
+
+.secenek {
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: color 0.3s;
+}
+
+.secenek:hover,
+.secenek.aktif {
+    color: #ff9800;
+    font-weight: bold;
+}
+
+.secenekler::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 1px;
+    background-color: white;
+    bottom: -10px;
+    left: 10%;
+}
+
+input,
+.buton {
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.buton {
+    background-color: #ff9800;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
+}
+
+.buton:hover {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}

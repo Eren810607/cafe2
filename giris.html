@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe Giriş</title>
+    <link rel="stylesheet" href="giris.css" />
+  </head>
+  <body>
+    <div class="arka-plan"></div>
+    <div class="kapsayici" id="giris-ekrani">
+      <div class="secenekler">
+        <div class="secenek aktif" id="kayit-ekrani" onclick="formGecis(true)">
+          Kayıt Ol
+        </div>
+        <div class="secenek" id="giris-ekrani-sec" onclick="formGecis(false)">
+          Giriş Yap
+        </div>
+      </div>
+      <h2 id="baslik">Kayıt Ol</h2>
+      <input type="email" id="email" placeholder="E-posta" required />
+      <input type="password" id="sifre" placeholder="Şifre" required />
+      <button class="buton" onclick="kimlikIslemi()">Devam</button>
+    </div>
+    <script src="giris.js"></script>
+  </body>
+</html>
